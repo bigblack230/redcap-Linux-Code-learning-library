@@ -1,0 +1,40 @@
+shutdown会给系统计划一个时间关机。它可以被用于停止、关机、重启机器。
+# shutdown -p now  ### 关闭机器
+# shutdown -H now  ### 停止机器      
+# shutdown -r 09:35 ### 在 09:35am 重启机器
+
+要取消即将进行的关机，只要输入下面的命令：
+# shutdown -c
+
+halt 命令通知硬件来停止所有的 CPU 功能，但是仍然保持通电。你可以用它使系统处于低层维护状态。注意在有些情况会它会完全关闭系统。
+# halt             ### 停止机器
+# halt -p          ### 关闭机器、关闭电源
+# halt --reboot    ### 重启机器
+
+poweroff 会发送一个 ACPI 信号来通知系统关机。
+# poweroff           ### 关闭机器、关闭电源
+# poweroff --halt    ### 停止机器
+# poweroff --reboot  ### 重启机器
+
+reboot 命令 reboot 通知系统重启。
+# reboot           ### 重启机器
+# reboot --halt    ### 停止机器
+# reboot -p        ### 关闭机器
+
+
+[Tab] 有『命令补全』与『文件补齐』的功能
+[Tab]      ## 接在一串指令的第一个字的后面，则为『命令补全』
+[Tab]      ## 接在一串指令的第二个字以后时，则为『文件补齐』
+若安装 bash-completion 软件，则在某些指令后面使用 [tab] 按键时，可以进行『选项/参数的补齐』功能！
+
+[Ctrl]+ C 如果在Linux 底下输入了错误的指令或参数，想让当前的程序『停掉』的话，可以输入：
+[Ctrl] + c 
+
+[Ctrl]-d 『键盘输入结束(End Of File, EOF 或 End Of Input)』的意思
+另外，他也可以用来取代 exit 的输入。
+例如你想要直接离开文字接口，可以直接按下：
+[Ctrl] + d   ## 相当于输入 exit
+
+[shift]+{[PageUP]|[Page Down]}
+[Shift]+[Page Up]    ## 往前翻页 
+[Shift]+[Page Down] ## 往后翻页
