@@ -1,0 +1,42 @@
+i 切换到输入模式，以输入字符。
+x 删除当前光标所在处的字符。
+: 切换到底线命令模式，以在最底一行输入命令。
+
+输入模式
+在命令模式下按下i就进入了输入模式。
+在输入模式中，可以使用以下按键：
+字符按键以及Shift组合，输入字符
+ENTER，回车键，换行
+BACK SPACE，退格键，删除光标前一个字符
+DEL，删除键，删除光标后一个字符
+方向键，在文本中移动光标
+HOME/END，移动光标到行首/行尾
+Page Up/Page Down，上/下翻页
+Insert，切换光标为输入/替换模式，光标将变成竖线/下划线
+ESC，退出输入模式，切换到命令模式
+
+底线命令模式
+在命令模式下按下:（英文冒号）就进入了底线命令模式。
+底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。
+在底线命令模式中，基本的命令有（已经省略了冒号）：
+q 退出程序
+w 保存文件
+
+yum 语法
+yum [options] [command] [package ...]
+options：可选，选项包括-h（帮助），-y（当安装过程提示选择全部为 "yes"），-q（不显示安装的过程）等等。
+command：要进行的操作。
+package：安装的包名。
+1. 列出所有可更新的软件清单命令：yum check-update
+2. 更新所有软件命令：yum update
+3. 仅安装指定的软件命令：yum install <package_name>
+4. 仅更新指定的软件命令：yum update <package_name>
+5. 列出所有可安裝的软件清单命令：yum list
+6. 删除软件包命令：yum remove <package_name>
+7. 查找软件包命令：yum search <keyword>
+8. 清除缓存命令:
+yum clean packages: 清除缓存目录下的软件包
+yum clean headers: 清除缓存目录下的 headers
+yum clean oldheaders: 清除缓存目录下旧的 headers
+yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的 headers
+
